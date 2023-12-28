@@ -1,0 +1,47 @@
+name: radio
+
+packages:
+  - .
+  - modules/*
+
+scripts:
+  analyze:
+    exec: dart analyze --fatal-infos .
+    description: Run `dart analyze` in selected or all packages.
+    packageFilters:
+      dirExists:
+        - lib
+
+  fix:
+    exec: dart fix --dry-run && dart fix --apply .
+    description: Run `dart fix` in selected or all packages.
+    packageFilters:
+      dirExists:
+        - lib
+
+  test:
+    exec: flutter test
+    description: Run `flutter test` in a selected package.
+    packageFilters:
+      dirExists:
+        - test
+
+  pub:get:
+    exec: flutter clean && flutter pub get
+    description: Run `flutter pub get` in selected or all packages.
+    packageFilters:
+      dirExists:
+        - lib
+
+  pub:upgrade:
+    exec: flutter pub upgrade
+    description: Run `dart pub upgrade` in selected or all packages.
+    packageFilters:
+      dirExists:
+        - lib
+
+  build_runner:
+    exec: dart run build_runner build --delete-conflicting-outputs
+    description: Run `dart run build_runner build --delete-conflicting-outputs` in selected or all packages.
+    packageFilters:
+      dependsOn: "build_runner"
