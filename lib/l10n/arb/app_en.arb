@@ -3,5 +3,8 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
-    }
+    },
+    "chooseATagYouLikeOrRadioStation": "Choose a tag you like or radio station",
+    "tagOnlineRadio": "Online Radio Stations"
+    
 }

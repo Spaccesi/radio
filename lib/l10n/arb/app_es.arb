@@ -3,5 +3,8 @@
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
-    }
+    },
+    "chooseATagYouLikeOrRadioStation": "Elige un tag que te guste o una estación de radio",
+    "tagOnlineRadio": "Estaciones de radio online"
+
 }
